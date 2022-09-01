@@ -20,7 +20,7 @@ When('the user shooses a specific product', () => {
     cy.get(converterPrices.product2_button()).click()  
 })
 
-When('the user to change the exachange rates of the product', () => {
+When('the user chooses  the exchange rate that he wants', () => {
     //cy.get('#form-currency > .btn-group > .dropdown-toggle > .fa').contains('li','€ Euro')
     //cy.get('#form-currency > .btn-group > .dropdown-toggle').contains('EUR')
     //cy.get('#form-currency > .btn-group > .dropdown-menu').contains('€ Euro').click({ force: true })
@@ -46,3 +46,8 @@ Then('the user should see the exchange rate selected', () => {
     .and('not.include.text', [data.euro_symbol, data.dollar_symbol])
 
 })
+
+//SCENARIO 2
+ Then('the user should see the numeric value of the exchange rate that he chose', () => {
+    cy.get(converterPrices.button_cart_text()).should('include.text', data.numericValue_product2_pound)
+ })
