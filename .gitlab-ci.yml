@@ -24,4 +24,4 @@ teste-job:
   stage: teste
   script:
     - npm ci
-    - cy:run:desktop
+    - npm run cy:run:desktop
