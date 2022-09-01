@@ -8,6 +8,8 @@ const createEsbuildPlugin =
 
 //const { defineConfig } = require("cypress");
 //npx cypress run --record --key 3913b5ae-b287-477c-9f35-a674f709c79d
+
+
 module.exports = defineConfig({
   extends: "./cypress.json",
   viewportWidth: 414,

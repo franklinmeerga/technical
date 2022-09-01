@@ -17,11 +17,15 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
 stages:          # List of stages for jobs, and their order of execution
-  - teste       # esse aqui é mue job
+  - Desktop       # esse aqui é mue job
 
 teste-job:
   image: cypress/browsers:node14.19.0-chrome100-ff99-edge       # This job runs in the build stage, which runs first.
-  stage: teste
+  stage: Desktop
   script:
     - npm ci
     - npm run cy:run:desktop
+  only:
+    - main
+    - master
+  

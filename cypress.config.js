@@ -17,6 +17,8 @@ const createEsbuildPlugin =
 //   return config;
 // }
 // npx cypress run --record --key 3913b5ae-b287-477c-9f35-a674f709c79d
+// ib04DDJSfNMWLI5hbyarQsdNAGys7Etf
+
 module.exports = defineConfig({
   projectId: "t8bkbw",
   e2e: {
