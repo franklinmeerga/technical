@@ -5,20 +5,30 @@ const addCucumberPreprocessorPlugin =
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
-//If using this approach, just call the key "setupNodeEvents" in the E2E configurations
-// async function setupNodeEvents(on, config) {
-//   await addCucumberPreprocessorPlugin(on, config);
-//   on(
-//     "file:preprocessor",
-//     createBundler({
-//       plugins: [createEsbuildPlugin(config)],
-//     })
-//   );
-//   return config;
-// }
-// npx cypress run --record --key 3913b5ae-b287-477c-9f35-a674f709c79d
+
+//const { defineConfig } = require("cypress");
+//npx cypress run --record --key 3913b5ae-b287-477c-9f35-a674f709c79d
 module.exports = defineConfig({
+  extends: "./cypress.json",
+  viewportWidth: 414,
+  viewportHeight: 896,
   projectId: "t8bkbw",
+
+  env: {
+    environment: "mobile",
+  },
+  
+  chromeWebSecurity: false,
+  video: true,
+  videoCompression: false,
+  pageLoadTimeout: 180000,
+  requestTimeout: 15000,
+
+  retries: {
+    runMode: 3,
+    openMode: 0,
+  },
+
   e2e: {
     async setupNodeEvents(on, config) {
       const bundler = createBundler({
@@ -30,9 +40,8 @@ module.exports = defineConfig({
 
       return config;
     },
+
     specPattern: "cypress/e2e/features/*.feature",
     baseUrl: "http://tutorialsninja.com/demo",
-    chromeWebSecurity: false,
   },
 });
-

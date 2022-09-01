@@ -7,7 +7,7 @@ Feature:  converter prices Test
         When the user shooses a specific product
         When  the user chooses  the exchange rate that he wants
         Then the user should see the exchange rate selected
-        
+      
     Scenario: validate the numeric value of the exchange rate 
         Given  the user is on the home page
         When the user shooses a specific product
