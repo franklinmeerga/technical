@@ -1,0 +1,9 @@
+{
+ 
+    "stepDefinitions": [
+        "[filepath]/**/*.{js,ts}",
+        "[filepath].{js,ts}",
+  
+        "cypress/support/steps/Checkout/*.{js,ts}"
+    ]
+  }
