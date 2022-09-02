@@ -1,0 +1,45 @@
+OBJETIVO PRINCIPAL:
+Todos os scenarios foram escritos usando a syntax gherkin, onde a função do gherkin é padronizar a forma de descrever especificações de cenários, baseado na regra de negócio.
+O gherkin foi implementado no cypress usando o cucumber preprossesor
+
+Obs: Os tres primeiros passos de cada scenario são os mesmos, então eles poderiam ser resumidos usando eles como Background porem decidi deixar eles na sitax normal do cucumber 
+Obs: A API free que foi suministrada no desafio não consegui usar ele pois o owner dessa API não deu a chave de asseso, então eu usei outrta API que faz a mesma funcionalidade
+
+Explicaçaõ dos scenarios:
+
+SCENARIO 1
+
+O objetivo desse  scenario é é primeiramente validar o simbolo da moeda que foi escolida para fazer o pagamento.
+No passo Given, o usuario já está na home page (está no end-point certo)
+No passo When o usuario escolhe um producto (nesse paso ele busca o produto no search bar)
+No passo When o usuario escolhe o moeda na qual ele deseja fazer o pagament do produto escolhido no passo anterio
+No passo Then o usuario deveria ver que o simbolo da moeda que ele escolhou para fazer o pagamento seja o certo
+
+SCENARIO 2
+
+O objetivo desse  scenario é é primeiramente validar o simbolo da moeda que foi escolida para fazer o pagamento.
+No passo Given, o usuario já está na home page (está no end-point certo)
+No passo When o usuario escolhe um producto (nesse paso ele busca o produto no search bar)
+No passo When o usuario escolhe o moeda na qual ele deseja fazer o pagament do produto escolhido no passo anterio
+No passo Then o usuario deveria ver que o valor múmerico  da moeda que ele escolhou para fazer o pagamento seja o certo com base no valor de referencia da fixture
+
+SCENARIO 3
+
+O objetivo desse  scenario é é primeiramente validar o simbolo da moeda que foi escolida para fazer o pagamento.
+No passo Given, o usuario já está na home page (está no end-point certo)
+No passo When o usuario escolhe um producto (nesse paso ele busca o produto no search bar)
+No passo When o usuario escolhe o moeda na qual ele deseja fazer o pagament do produto escolhido no passo anterio
+No passo Then o usuario deveria ver que o valor múmerico  da moeda que ele escolhou para fazer o pagamento seja igual ao valor retornado pela API de terceiro usada 
+ 
+ Obs: no passo then do scenario 3 são feitas duas validações, uma de codigo de status da API e outra que compara o valor da API com o valor numerico do site
+
+
+Execução do codigo:
+para rodar os scenarios basta só colocar no shell o seguente comando
+
+// rodar a versão DESKTOP o codigo é
+npm run cy:open:Desktop
+
+// rodar a versão MOBILE o codigo é
+npm run cy:open:mobile
+

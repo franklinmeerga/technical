@@ -56,6 +56,6 @@ Then('the numeric value of the API and web site should be the same', () => {
         const {success, query, info, result} = body
 
         expect(status).to.eq(200)
-        expect(result).to.eq(105.70)
+        expect(result).to.eq(74.73)
     })
  })
