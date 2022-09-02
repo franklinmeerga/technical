@@ -21,6 +21,10 @@ const createEsbuildPlugin =
 
 module.exports = defineConfig({
   projectId: "t8bkbw",
+  env: {
+    environment: "desktop",
+    API_KEY: 'ib04DDJSfNMWLI5hbyarQsdNAGys7Etf'
+  },
   e2e: {
     async setupNodeEvents(on, config) {
       const bundler = createBundler({

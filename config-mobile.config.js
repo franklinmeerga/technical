@@ -18,6 +18,7 @@ module.exports = defineConfig({
 
   env: {
     environment: "mobile",
+    API_KEY: 'ib04DDJSfNMWLI5hbyarQsdNAGys7Etf'
   },
   
   chromeWebSecurity: false,
