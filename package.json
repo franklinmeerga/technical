@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:conf:desktop": "cypress open  --config-file config-desktop.config.js",
-    "cy:conf:mobile": "cypress open  --config-file config-mobile.config.js",
+    "cy:open:desktop": "cypress open  --config-file config-desktop.config.js",
+    "cy:open:mobile": "cypress open  --config-file config-mobile.config.js",
     "cy:run:desktop": "cypress run  --config-file config-desktop.config.js",
     "cy:run:mobile": "cypress run  --config-file config-mobile.config.js"
   },
